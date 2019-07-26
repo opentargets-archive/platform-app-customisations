@@ -1,14 +1,12 @@
 import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 const styles = () => ({
   footer: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '50px',
     backgroundColor: '#3a4454',
+    padding: '10px'
   },
   footerText: {
     color: 'white',
@@ -17,9 +15,10 @@ const styles = () => ({
 
 const CustomFooter = ({classes }) => {
   return (
-    <div className={classes.footer}>
-      <Typography className={classes.footerText}>Custom Footer</Typography>
-    </div>
+    <Grid container className={classes.footer} direction="column" alignItems="center">
+      <Grid item><Typography className={classes.footerText}>Company name</Typography></Grid>
+      <Grid item><Typography className={classes.footerText}>Support: support@company.com</Typography></Grid>
+    </Grid>
   );
 };
 
