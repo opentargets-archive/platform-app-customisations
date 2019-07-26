@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 const Description = ({ symbol }) => (
   <Fragment>
-    ABC company section for {symbol} hey there
+    ABC company section for {symbol}
   </Fragment>
 );
 
