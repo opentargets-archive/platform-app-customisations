@@ -16,3 +16,7 @@ To customise the platform app:
 - For production, you can produce a build containing the customisations by running the `yarn build:customise` script inside the `platform-app`
   repository. This will create a `build` directory containing static assets files (html, css, js) that you can deploy.
 
+### Customising the theme
+
+To customise the theme, overwrite the `theme.js` file by having a [`theme.js`](https://github.com/opentargets/platform-app-customisations/blob/master/theme.js) file in your customisation directory.
+
