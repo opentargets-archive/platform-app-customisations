@@ -23,5 +23,14 @@ To customise the theme, overwrite the [`theme.js`](https://github.com/opentarget
 
 ### Customising the footer
 
-To customise the footer, overwrite [`BasePage.js`](https://github.com/opentargets/platform-app-customisations/blob/master/common/BasePage.js) with a [`BasePage`](https://github.com/opentargets/platform-app-customisations/blob/master/common/BasePage.js) component so that it uses a custom [Footer](https://github.com/opentargets/platform-app-customisations/blob/master/common/CustomFooter.js) component.
+To customise the footer, overwrite [`BasePage.js`](https://github.com/opentargets/platform-app-customisations/blob/master/common/BasePage.js) with a [`BasePage`](https://github.com/opentargets/platform-app-customisations/blob/master/common/BasePage.js) component in the customisation
+directory so that it uses a custom [Footer](https://github.com/opentargets/platform-app-customisations/blob/master/common/CustomFooter.js) component.
+
+### Changing order of sections
+One can change the order of sections in the target, disease, drug, and evidence page. To do so, overwrite the [`configuration.js`](https://github.com/opentargets/platform-app-customisations/blob/master/configuration.js) and change the order of the strings in the arrays.
+
+### Deleting sections
+To delete sections, remove their corresponding string from the [`configuration.js`](https://github.com/opentargets/platform-app-customisations/blob/master/configuration.js) file
+
+### Adding a section
 
