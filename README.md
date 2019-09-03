@@ -33,4 +33,34 @@ One can change the order of sections in the target, disease, drug, and evidence 
 To delete sections, remove their corresponding string from the [`configuration.js`](https://github.com/opentargets/platform-app-customisations/blob/master/configuration.js) file
 
 ### Adding a section
+To add a section, create a [directory](https://github.com/opentargets/platform-app-customisations/tree/master/target/sections/ABC) that will contain the files related to it. This directory should have an [`index.js`](https://github.com/opentargets/platform-app-customisations/blob/master/target/sections/ABC/index.js) file.
 
+The `index.js` file should have a structure as follows:
+
+```js
+// helps to load graphql files
+import { loader } from 'graphql.macro';
+
+// the name of your new section
+export const id = '<section-id>';
+// the nice name you want for your new section
+export const name = '<section-name>';
+
+// a function of the response of summaryQuery, to determine whether there is data for this target (and therefore whether to load the detail or not)
+export const hasSummaryData = <function>;
+
+// (optional) queries against platform-api, the new graphql api
+export const summaryQuery = loader('./summaryQuery.gql');
+export const sectionQuery = loader('./sectionQuery.gql');
+
+// react components to render the data:
+// typically a string, above the main content section, but could have links
+export { default as DescriptionComponent } from './Description';
+// typically a string, in the summary widget, but could be more complex
+export { default as SummaryComponent } from './Summary';
+// the main content section
+export { default as SectionComponent } from './Section';
+
+```
+
+Make sure to include the id string in the corresponding array in [configuration.js](https://github.com/opentargets/platform-app-customisations/blob/master/configuration.js)
