@@ -63,4 +63,4 @@ export { default as SectionComponent } from './Section';
 
 ```
 
-Make sure to include the id string in the corresponding array in [configuration.js](https://github.com/opentargets/platform-app-customisations/blob/master/configuration.js)
+Make sure to include the `id` string in the corresponding array in [configuration.js](https://github.com/opentargets/platform-app-customisations/blob/master/configuration.js) and import and export the `index.js` in the corresponding `sectionIndex.js` file as it's done [here](https://github.com/opentargets/platform-app-customisations/blob/master/target/sectionIndex.js)
