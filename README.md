@@ -18,5 +18,10 @@ To customise the platform app:
 
 ### Customising the theme
 
-To customise the theme, overwrite the `theme.js` file by having a [`theme.js`](https://github.com/opentargets/platform-app-customisations/blob/master/theme.js) file in your customisation directory.
+To customise the theme, overwrite the [`theme.js`](https://github.com/opentargets/platform-app/blob/master/src/public/theme.js) file by having a [`theme.js`](https://github.com/opentargets/platform-app-customisations/blob/master/theme.js) file in your customisation directory.
+
+
+### Customising the footer
+
+To customise the footer, overwrite [`BasePage.js`](https://github.com/opentargets/platform-app-customisations/blob/master/common/BasePage.js) with a [`BasePage`](https://github.com/opentargets/platform-app-customisations/blob/master/common/BasePage.js) component so that it uses a custom [Footer](https://github.com/opentargets/platform-app-customisations/blob/master/common/CustomFooter.js) component.
 
