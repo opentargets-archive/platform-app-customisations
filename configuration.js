@@ -5,20 +5,45 @@ export const targetSectionsDefaultOrder = [
 ];
 
 export const diseaseSectionsDefaultOrder = [
-  'relatedDiseases',
-  'phenotypes',
+  'ontology',
   'drugs',
   'bibliography',
-  'classification',
+  'phenotypes',
+  'relatedDiseases',
 ];
 
 export const drugSectionsDefaultOrder = [
   'mechanismsOfAction',
   'adverseEvents',
   'bibliography',
+  'linkedTargets',
+  'linkedDiseases',
 ];
 
 export const evidenceSectionsDefaultOrder = [
+  'gwasCatalog',
+  'phewasCatalog',
+  'eva',
+  'uniProt',
+  'uniProtLiterature',
+  'gene2Phenotype',
+  'genomicsEngland',
+  'intogen',
+  'cancerGeneCensus',
+  'evaSomatic',
+  'uniProtSomatic',
+  'reactome',
+  'progeny',
+  'slapenrich',
+  'crispr',
+  'sysBio',
+  'drugs',
+  'differentialExpression',
+  'textMining',
+  'animalModels',
+];
+
+export const evidenceByDatatypeSectionsDefaultOrder = [
   'genetic',
   'somatic',
   'drugs',
