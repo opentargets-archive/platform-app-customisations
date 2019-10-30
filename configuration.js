@@ -5,6 +5,7 @@ export const targetSectionsDefaultOrder = [
 ];
 
 export const diseaseSectionsDefaultOrder = [
+  'otarProjects',
   'ontology',
   'drugs',
   'bibliography',
