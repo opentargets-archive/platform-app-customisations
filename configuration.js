@@ -1,5 +1,6 @@
 export const targetSectionsDefaultOrder = [
   'tractability',
+  'cancerBiomarkers',
   'abc',
   'drugs',
 ];
