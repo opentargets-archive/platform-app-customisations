@@ -1,25 +1,24 @@
 export const targetSectionsDefaultOrder = [
   'tractability',
   'cancerBiomarkers',
-  'abc',
-  'drugs',
+  'knownDrugs'
 ];
 
 export const diseaseSectionsDefaultOrder = [
   'otarProjects',
   'ontology',
-  'drugs',
-  'bibliography',
+  'knownDrugs',
   'phenotypes',
   'relatedDiseases',
+  'bibliography',
 ];
 
 export const drugSectionsDefaultOrder = [
+  'indications',
   'mechanismsOfAction',
+  'knownDrugs',
   'adverseEvents',
   'bibliography',
-  'linkedTargets',
-  'linkedDiseases',
 ];
 
 export const evidenceSectionsDefaultOrder = [
