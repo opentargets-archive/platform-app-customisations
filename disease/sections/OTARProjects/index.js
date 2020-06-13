@@ -4,8 +4,7 @@ export const id = 'otarProjects';
 
 export const name = 'Open Targets Projects';
 
-export const hasSummaryData = () => true;
-
+export const hasSummaryData = (data) => data && data.length > 0;
 
 export const summaryQuery = loader('./summaryQuery.gql');
 export const sectionQuery = loader('./sectionQuery.gql');
