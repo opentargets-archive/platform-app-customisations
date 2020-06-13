@@ -1,24 +1,41 @@
 import React from 'react';
 import projects from './projects.json';
-import { OtTableRF } from 'ot-ui';
+import { Link, OtTableRF } from 'ot-ui';
 
-const columns = [
-  {
-    id: 'projectId',
-    label: 'Project ID',
-  },
-  {
-    id: 'name',
-    label: 'Name'
-  },
-  {
-    id: 'efoId',
-    label: 'EFO ID',
-  }
-]
+const getColumns = (name) => {
+  const columns = [
+    {
+      id: 'otarCode',
+      label: 'Project Code',
+    },
+    {
+      id: 'projectName',
+      label: 'Project Name'
+    },
+    {
+      id: 'name',
+      label: 'Disease',
+      renderCell: () => name
+    },
+    {
+      id: 'status',
+      label: 'Status'
+    },
+    {
+      id: 'reference',
+      label: 'Open Targets Intranet Link',
+      renderCell: ({ otarCode, reference }) => {
+        return <Link to={reference} external>{otarCode} project page</Link>
+      }
+    }
+  ];
+  return columns;
+}
 
-const Section = () => {
-  return <OtTableRF columns={columns} data={projects}/>
+const Section = ({ name, data }) => {
+  // console.log('props', props);
+  const columns = getColumns(name);
+  return <OtTableRF columns={columns} data={data}/>
 };
 
 export default Section;

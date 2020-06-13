@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Summary = ({ data }) => {
-  console.log('data', data);
   const numActive = data.reduce((acc, project) => {
     return project.status === 'Active' ? acc + 1 : acc;
   }, 0);
