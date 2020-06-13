@@ -1,5 +1,4 @@
 import React from 'react';
-import projects from './projects.json';
 import { Link, OtTableRF } from 'ot-ui';
 
 const getColumns = (name) => {
@@ -33,7 +32,6 @@ const getColumns = (name) => {
 }
 
 const Section = ({ name, data }) => {
-  // console.log('props', props);
   const columns = getColumns(name);
   return <OtTableRF columns={columns} data={data}/>
 };
