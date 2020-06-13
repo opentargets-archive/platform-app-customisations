@@ -1,3 +1,5 @@
+import { lighten, darken } from 'polished';
+
 const PRIMARY = '#6b4e71';
 const SECONDARY = '#ff6350';
 
@@ -10,16 +12,19 @@ const theme = {
     borderRadius: 0,
   },
   typography: {
-    useNextVariants: true,
-    fontFamily: '"Inter", "serif"',
+    fontFamily: '"Inter", "sans-serif"',
   },
   palette: {
     primary: {
+      light: lighten(0.2, PRIMARY),
       main: PRIMARY,
+      dark: darken(0.2, PRIMARY),
       contrastText: '#fff',
     },
     secondary: {
+      light: lighten(0.2, SECONDARY),
       main: SECONDARY,
+      dark: darken(0.2, SECONDARY),
       contrastText: '#fff',
     },
     text: {
@@ -29,7 +34,9 @@ const theme = {
     tagVariant: VARIANT,
     indexVariant: VARIANT,
     study: STUDY,
+    high: darken(0.2, PRIMARY),
     medium: PRIMARY,
+    low: lighten(0.2, PRIMARY),
     footer: '#2e2d35',
   },
   sectionPadding: '8px',
@@ -83,15 +90,14 @@ const theme = {
     },
     MuiTab: {
       root: {
+        textTransform: 'none',
         minWidth: '10px !important',
         '&$selected': {
           backgroundColor: PRIMARY,
           color: 'white',
           '&:hover': { backgroundColor: PRIMARY },
         },
-      },
-      label: {
-        textTransform: 'none',
+        '&:hover': { backgroundColor: lighten(0.3, PRIMARY) },
       },
     },
     MuiTypography: {
@@ -109,6 +115,7 @@ const theme = {
         minHeight: 0,
         '&$expanded': {
           minHeight: 0,
+          margin: 0,
         },
       },
       content: {
@@ -117,10 +124,6 @@ const theme = {
         '&$expanded': {
           margin: 0,
         },
-      },
-      expanded: {
-        margin: 0,
-        minHeight: 0,
       },
     },
     MuiExpansionPanelDetails: {
